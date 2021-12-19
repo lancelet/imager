@@ -58,6 +58,7 @@ library
     Imager.Util
 
   build-depends:
+    , random  ^>=1.2.1
     , strict  ^>=0.4.0.1
     , vector  ^>=0.12.3.1
 
