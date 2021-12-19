@@ -27,5 +27,5 @@ data Pt a = Pt
 --
 -- >>> pt 42 43
 -- Pt {x = 42, y = 43}
-pt :: forall a. a -> a -> Pt a
-pt x y = Pt {..}
+pt :: forall a . a -> a -> Pt a
+pt x y = Pt { .. }

@@ -50,9 +50,11 @@ library
   import:          common-options
   hs-source-dirs:  src
   exposed-modules:
+    Imager.Image
     Imager.Pt
     Imager.Rect
-    Imager.Sampler
+    Imager.Samples
+
   build-depends:   strict ^>=0.4.0.1
 
 executable imager
@@ -67,8 +69,7 @@ test-suite imager-test
   hs-source-dirs: test
   main-is:        Spec.hs
   ghc-options:    -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      doctest >=0.20.0
+  build-depends:  doctest >=0.20.0
 
 benchmark imager-benchmark
   import:         common-options

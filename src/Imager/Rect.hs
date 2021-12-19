@@ -19,8 +19,8 @@ module Imager.Rect
   , contains
   ) where
 
-import           Imager.Pt (Pt)
-import qualified Imager.Pt as Pt
+import           Imager.Pt                      ( Pt )
+import qualified Imager.Pt                     as Pt
 
 import           Data.List                      ( intercalate )
 import           Data.Strict.Maybe              ( Maybe(Just, Nothing)
@@ -105,9 +105,7 @@ contains
   -> Pt a    -- ^ point to test
   -> Bool    -- ^ true if the rectangle contains the point; false otherwise
 contains Rect {..} p =
-  let
-    x, y :: a
-    x = Pt.x p
-    y = Pt.y p
-  in
-    (minX <= x) && (x < maxX) && (minY <= y) && (y < maxY)
+  let x, y :: a
+      x = Pt.x p
+      y = Pt.y p
+  in  (minX <= x) && (x < maxX) && (minY <= y) && (y < maxY)

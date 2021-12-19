@@ -1,2 +1,0 @@
-module Imager.Sampler where
-
