@@ -7,8 +7,8 @@ See README for more info
 -}
 
 module Imager
-    ( projectName
-    ) where
+  ( projectName
+  ) where
 
 
 projectName :: String

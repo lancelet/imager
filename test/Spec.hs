@@ -1,6 +1,8 @@
-module Main (main) where
+module Main
+  ( main
+  ) where
 
-import Imager (projectName)
+import           Imager                         ( projectName )
 
 
 main :: IO ()
