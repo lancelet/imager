@@ -16,6 +16,8 @@ module Imager.Rect
   , maxX
   , minY
   , maxY
+  , width
+  , height
   , contains
   ) where
 
@@ -88,6 +90,16 @@ rect minX maxX minY maxY = if (maxX < minX) || (maxY < minY)
     in
       error $ "Invalid Rect: " ++ details
   else Rect { .. }
+
+
+-- | Return the width of a 'Rect'.
+width :: Num a => Rect a -> a
+width Rect {..} = maxX - minX
+
+
+-- | Return the height of a 'Rect'.
+height :: Num a => Rect a -> a
+height Rect {..} = maxY - minY
 
 
 -- | Check if a 'Rect' contains a 'Pt'.

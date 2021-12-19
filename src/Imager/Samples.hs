@@ -1,3 +1,4 @@
+{-# LANGUAGE DerivingStrategies #-}
 module Imager.Samples
   ( -- * Types
     Sample(Sample, pt, value)
@@ -13,3 +14,4 @@ data Sample a b = Sample
   { pt    :: !(Pt a)
   , value :: !a
   }
+  deriving stock (Eq, Show)

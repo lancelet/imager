@@ -18,4 +18,12 @@ announceRunDocTests = do
   putStrLn "---- Finished DocTests ----"
 
 runDocTests :: IO ()
-runDocTests = DocTest.doctest ["-isrc", "src/Imager/Rect.hs"]
+runDocTests = DocTest.doctest
+  [ "-isrc"
+  , "src/Imager/Image.hs"
+  , "src/Imager/Pt.hs"
+  , "src/Imager/Rect.hs"
+  , "src/Imager/Sampler.hs"
+  , "src/Imager/Samples.hs"
+  , "src/Imager/Util.hs"
+  ]
