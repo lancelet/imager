@@ -49,13 +49,16 @@ common common-options
 library
   import:          common-options
   hs-source-dirs:  src
-  exposed-modules: Imager
+  exposed-modules:
+    Imager.Pt
+    Imager.Rect
+    Imager.Sampler
+  build-depends:   strict ^>=0.4.0.1
 
 executable imager
   import:         common-options
   hs-source-dirs: app
   main-is:        Main.hs
-  build-depends:  imager
   ghc-options:    -threaded -rtsopts -with-rtsopts=-N
 
 test-suite imager-test
@@ -63,13 +66,13 @@ test-suite imager-test
   type:           exitcode-stdio-1.0
   hs-source-dirs: test
   main-is:        Spec.hs
-  build-depends:  imager
   ghc-options:    -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      doctest >=0.20.0
 
 benchmark imager-benchmark
   import:         common-options
   type:           exitcode-stdio-1.0
   hs-source-dirs: benchmark
   main-is:        Main.hs
-  build-depends:  imager
   ghc-options:    -threaded -rtsopts -with-rtsopts=-N
